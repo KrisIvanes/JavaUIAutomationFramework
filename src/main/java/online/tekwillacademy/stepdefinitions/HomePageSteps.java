@@ -16,9 +16,9 @@ public class HomePageSteps {
         driver.get("https://tekwillacademy-opencart.online/");
     }
 
-    @And("Register Page is accessed from Home Page buttons")
+    @And("Register Page is accessed from Home Page button")
     public void registerPageIsAccessedFromHomePageButtons() {
         homePage.navigateToRegisterPage();
+        System.out.println("Code from step 2");
     }
-
 }
