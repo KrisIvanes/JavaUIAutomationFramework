@@ -1,11 +1,15 @@
 package online.tekwillacademy.pageobjects;
 
 import online.tekwillacademy.managers.ScrollManager;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RegisterPage extends Page {
+    private static final Logger logger = LogManager. getLogger(RegisterPage.class);
     public RegisterPage(WebDriver driver) {
         super(driver);
     }
@@ -33,7 +37,7 @@ public class RegisterPage extends Page {
         lastNameInput.sendKeys(lastName);
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
-        System.out.println("The form was completed for: " + email + " and password: " + password);
+        logger.log(Level.INFO, "The form was completed for: " + email + " and password: " + password);
     }
 
     public void enableTheToggleBar() {

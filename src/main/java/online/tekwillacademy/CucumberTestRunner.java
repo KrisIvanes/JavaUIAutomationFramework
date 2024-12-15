@@ -8,7 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/main/java/online/tekwillacademy/features",
         glue = "online.tekwillacademy.stepdefinitions",
-        tags = "@run"
+        tags = "",
+        plugin = {"pretty", "json:target/reports/cucumber.json", "html:target/reports/cucumber.html"}
+
 )
 
 public class CucumberTestRunner {
